@@ -1,5 +1,5 @@
 <?php
-namespace Sunanzhi\Api;
+namespace Sunanzhi\Api\Demo;
 
 class Demo
 {
