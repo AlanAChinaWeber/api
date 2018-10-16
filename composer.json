@@ -1,11 +1,20 @@
 {
     "name": "sunanzhi/api",
     "description": "接口",
+    "license": "MIT",
+    "minimum-stability": "master",
     "authors": [
         {
             "name": "sunanzhi",
             "email": "sunanzhi@hotmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": ">=7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sunanzhi\\Api\\": "src/"
+        }
+    }
 }
