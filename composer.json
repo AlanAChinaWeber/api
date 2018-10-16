@@ -14,7 +14,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Sunanzhi\\Api\\": "src"
+            "Sunanzhi\\Api\\": "src", 
+            "Sunanzhi\\Service\\":"service"
         }
     }
 }
