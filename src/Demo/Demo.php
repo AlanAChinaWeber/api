@@ -7,4 +7,9 @@ class Demo
     {
         return $check;
     }
+
+    public function test(string $str):string
+    {
+        return 'hello '.$str;
+    }
 }
