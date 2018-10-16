@@ -2,7 +2,7 @@
     "name": "sunanzhi/api",
     "description": "接口",
     "license": "MIT",
-    "minimum-stability": "master",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "sunanzhi",
