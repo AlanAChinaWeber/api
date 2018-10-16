@@ -1,0 +1,11 @@
+{
+    "name": "sunanzhi/api",
+    "description": "接口",
+    "authors": [
+        {
+            "name": "sunanzhi",
+            "email": "sunanzhi@hotmail.com"
+        }
+    ],
+    "require": {}
+}
