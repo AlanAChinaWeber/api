@@ -1,15 +1,13 @@
 <?php
 namespace Sunanzhi\Api\Demo;
 
-class Demo
-{
-    public function demo(bool $check):bool
-    {
-        return $check;
-    }
+use Sunanzhi\Service\Demo\DemoInterface;
+use Sunanzhi\Api\ApiClient;
 
-    public function test(string $str):string
+class Demo implements DemoInterface
+{
+    public function test(int $start = 0, int $count = 5):array
     {
-        return 'hello '.$str;
+        return ApiClient::request('Demo/Demo', __FUNCTION__, $start, $count);
     }
 }
