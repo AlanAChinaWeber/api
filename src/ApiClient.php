@@ -1,6 +1,9 @@
 <?php
 namespace Sunanzhi\Api;
 
+use GuzzleHttp\Exception\ServerException;
+
+
 /**
  * 请求api入口
  */
@@ -106,11 +109,15 @@ class ApiClient
     private static function guzzleRequest(string $url, array $args)
     {
         $guzzleClient = new \GuzzleHttp\Client();
-        $response = $guzzleClient->request('POST', $url, $args);
+        $body = json_encode($args);
+        try { 
+            $response = $guzzleClient->request('POST', $url, ['body' => $body]);
+        } catch (ServerException $e) {
+            exception($e->getMessage());
+        }
         $content = (string) $response->getBody();
-
         $object = '';
-
+        
         if ('' != $content) {
             $object = json_decode($content, true);
         }
